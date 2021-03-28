@@ -1,0 +1,68 @@
+npm i @material-ui/core
+npm i @material-ui/icons
+npm i react-tinder-card
+
+header.js
+import PersonIcon from "@material-ui/icons/Person";
+import IconButton from "@material-ui/core/IconButton";
+import ForumIcon from "@material-ui/core/Forum";
+<IconButton>
+<PersonIcon fontSize="large" className="header__icon" />
+</IconButton>
+
+<img className="header__logo" src="https://1000logos.net/wp-content/uploads/2018/07/tinder-logo.png" alt="" />
+<IconButton>
+<ForumIcon fontSize="large" className="header__icon" />
+</IconButton>
+
+
+header.css
+.header {
+display: flex;
+align-items: center;
+justify-content: space-between;
+z-index: 100;
+border-bottom: 1px solid #f9f9f9;
+}
+
+.header__logo {
+object-fit: contain;
+height: 40px;
+}
+
+.header__icon {
+padding: 20px;
+}
+
+
+TinderCards.js
+rfce
+className="tinderCards"
+import React, { useState } from "react";
+import "./TinderCards.css";
+
+const [people, setPeople] = useState([{
+name: "Danny DeVito",
+url: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Danny_DeVito_cropped_and_edited_for_brightness.jpg/440px-Danny_DeVito_cropped_and_edited_for_brightness.jpg",
+}]);
+
+return ( div.tinderCards > {people.map((person) => (
+h1 {person.name}))}
+)
+
+TinderCards.css
+.tinderCards {
+}
+
+
+
+current time: 50:21 (learn the MERN stack full tutorial for beginners 12 hour video on clever programmer) 
+
+
+Research:
+functional components- hot new powerful thing
+what is MongoDB
+what does the IconButton component from material ui core do, other than making whatever is between the opening and closing tags clickable?
+z-index in css
+
+
