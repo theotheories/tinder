@@ -13,7 +13,7 @@ function Header() {
 
       <img
         className="header__logo"
-        src="https://1000logos.net/wp-content/uploads/2018/07/tinder-logo.png"
+        src="https://www.globaldatinginsights.com/wp-content/uploads/2017/08/Screen-Shot-2017-08-17-at-10.04.531-1024x705.png"
         alt=""
       />
 
@@ -25,3 +25,5 @@ function Header() {
 }
 
 export default Header;
+
+
