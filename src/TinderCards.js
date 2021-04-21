@@ -15,9 +15,9 @@ function TinderCards() {
       {people.map((person) => (
         <h1>{person.name}</h1>
       ))}
-      )
     </div>
-  );
-}
+  )
+};
+
 
 export default TinderCards;

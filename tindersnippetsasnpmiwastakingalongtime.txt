@@ -1,11 +1,13 @@
 npm i @material-ui/core
 npm i @material-ui/icons
 npm i react-tinder-card
+tick
 
 header.js
 import PersonIcon from "@material-ui/icons/Person";
 import IconButton from "@material-ui/core/IconButton";
 import ForumIcon from "@material-ui/core/Forum";
+tick
 <IconButton>
 <PersonIcon fontSize="large" className="header__icon" />
 </IconButton>
@@ -14,7 +16,7 @@ import ForumIcon from "@material-ui/core/Forum";
 <IconButton>
 <ForumIcon fontSize="large" className="header__icon" />
 </IconButton>
-
+tick
 
 header.css
 .header {
@@ -33,7 +35,7 @@ height: 40px;
 .header__icon {
 padding: 20px;
 }
-
+tick
 
 TinderCards.js
 rfce
@@ -50,10 +52,12 @@ return ( div.tinderCards > {people.map((person) => (
 h1 {person.name}))}
 )
 
+tick
+
 TinderCards.css
 .tinderCards {
 }
-
+tick
 
 
 current time: 50:21 (learn the MERN stack full tutorial for beginners 12 hour video on clever programmer) 
