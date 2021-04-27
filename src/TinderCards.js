@@ -1,20 +1,26 @@
-import React, {
-  useState
-} from "react";
+import React, { useState, useEffect } from "react";
+import axios from "./axios";
 import TinderCard from "react-tinder-card";
 import "./TinderCards.css";
 
 function TinderCards() {
-  const [people, setPeople] = useState([
-    {
-      name: "Danny DeVito",
-      url: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Danny_DeVito_cropped_and_edited_for_brightness.jpg/440px-Danny_DeVito_cropped_and_edited_for_brightness.jpg",
-    },
-    {
-      name: "Sofia Coppola",
-      url: "https://m.media-amazon.com/images/M/MV5BMTcxODIwMDMzOF5BMl5BanBnXkFtZTgwMDE5MTU0MDE@._V1_.jpg",
-    },
-  ]);
+  const [people, setPeople] = useState([]);
+  
+  // useEffect=componentDidMount, when it loads, it will run this code once only
+  // [] at end contains variables that once changed will cause this code to be run again, only if they change
+  // this is the standard async syntax for this usage
+  // hook
+  useEffect(() => {
+    async function fetchData() {
+      const request = await axios.get("/tinder/cards");
+      
+      setPeople(request.data);
+    }
+    //then make sure to call this function just defined
+    fetchData();
+  }, []);
+
+  console.log(people);
 
   const swiped = (nameToDelete) => {
     console.log("removing", nameToDelete);
@@ -39,8 +45,8 @@ function TinderCards() {
         >
           <div
           className="card"
-          style={{ backgroundImage: `url(${person.url})`}}>
-<h3>{person.name}</h3>
+          style={{ backgroundImage: `url(${person.imgUrl})`}}>
+            <h3>{person.name}</h3>
           </div>
         </TinderCard>
       ))} 
